@@ -2,4 +2,5 @@
 git fetch
 git pull
 npm i
-serve -s build
+npm run build
+nginx -s reload
