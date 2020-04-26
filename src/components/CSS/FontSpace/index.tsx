@@ -18,7 +18,7 @@ const FontSpace:React.FC<FontSpaceProps> = (props) => {
           loop
         />
         <div className={styles.text_box} style={props.width ? { width: props.width } : {}}>
-          {props.text || <span>Welcome to My World!</span>}
+          {props.text || <span className={styles.text}>Welcome to My World!</span>}
         </div>
       </div>
     </div>
