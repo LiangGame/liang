@@ -1,8 +1,10 @@
 import React, { ReactNode } from 'react';
+import PropTypes from 'prop-types';
 import styles from './index.module.less';
 
 interface FontSpaceProps {
   text?: string | ReactNode;
+  width?: string | number;
 }
 const FontSpace:React.FC<FontSpaceProps> = (props) => {
   return (
@@ -15,12 +17,17 @@ const FontSpace:React.FC<FontSpaceProps> = (props) => {
           autoPlay
           loop
         />
-        <div className={styles.text_box}>
+        <div className={styles.text_box} style={props.width ? { width: props.width } : {}}>
           {props.text || <span>Welcome to My World!</span>}
         </div>
       </div>
     </div>
   );
+};
+
+FontSpace.propTypes = {
+  text: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 export default FontSpace;

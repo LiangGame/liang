@@ -13,7 +13,7 @@ const Home:React.FC = () => {
 
   return (
     <div className={styles.App}>
-      <Space text={font} />
+      <Space width="40%" text={font} />
     </div>
   );
 };
