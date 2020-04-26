@@ -17,6 +17,10 @@ const siderMenu = [
         title: '镂空文字',
         path: '/css/fontSpace',
       },
+      {
+        title: '3D卡片',
+        path: '/css/3dcard',
+      },
     ],
   },
 ];

@@ -3,6 +3,7 @@ import CSS from '@/pages/CSS';
 import BasicLayout from '@/layout/BasicLayput';
 import NotFound from '@/pages/NotFound';
 import FontSpace from '@/pages/FontSpace';
+import Card from '@/pages/ThreeDCard';
 
 const router = [
   {
@@ -25,6 +26,11 @@ const router = [
         path: '/css/fontspace',
         exact: true,
         component: FontSpace,
+      },
+      {
+        path: '/css/3dcard',
+        exact: true,
+        component: Card,
       },
     ],
   },

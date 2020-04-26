@@ -1,22 +1,25 @@
 import React from 'react';
 import styles from './index.module.less';
-import Space from '@/components/CSS/FontSpace';
+import CSSLayout from '@/layout/CSSLayout';
 import ThreeDCard from '@/components/CSS/ThreeDCard';
 
-const Home:React.FC = () => {
-  const font = (
-    <div className={styles['font-space']}>
-      欢迎来到这里，
-      <br />
-      精彩不断！
-    </div>
-  );
+const breadcrumb = [
+  {
+    title: '首页',
+    path: '/',
+  },
+  {
+    title: 'CSS',
+    path: '/css',
+  },
+  {
+    title: '3D卡片',
+  },
+];
 
+const Card:React.FC = () => {
   return (
-    <div className={styles.App}>
-      <div className={styles['font-space-wrap']}>
-        <Space width="40%" text={font} />
-      </div>
+    <CSSLayout breadcrumb={breadcrumb}>
       <div className={styles['card-wrap']}>
         <ThreeDCard
           pic="https://images.unsplash.com/photo-1505535162959-9bbcb4ab22d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=400"
@@ -34,8 +37,8 @@ const Home:React.FC = () => {
           content="childhood to this deadly disease. It was not unusual to find him playing and racing around his backyard, wearing his medicine-laden backpack"
         />
       </div>
-    </div>
+    </CSSLayout>
   );
 };
 
-export default Home;
+export default Card;
